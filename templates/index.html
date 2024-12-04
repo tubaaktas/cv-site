@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ profile.name }} - CV</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Inconsolata&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <div class="content">
+            <header>
+                <h1>{{ profile.name }}</h1>
+                <p>{{ profile.title }}</p>
+            </header>
+
+            <main>
+                <section class="profile-info">
+                    <h2>Hakkımda</h2>
+                    <p>{{ profile.about }}</p>
+                </section>
+
+                <section class="experience">
+                    <h2>Deneyim</h2>
+                    <ul>
+                        {% for job in experience %}
+                        <li>
+                            <strong>{{ job.title }}</strong> - {{ job.company }} ({{ job.date }})
+                            {% if job.description %}
+                            <p>{{ job.description }}</p>
+                            {% endif %}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </section>
+
+                <section class="education">
+                    <h2>Eğitim</h2>
+                    <ul>
+                        {% for edu in education %}
+                        <li>
+                            <strong>{{ edu.degree }}</strong> - {{ edu.school }} ({{ edu.date }})
+                            {% if edu.gpa %}
+                            <p>GNO: {{ edu.gpa }}</p>
+                            {% endif %}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </section>
+
+                <section class="skills">
+                    <h2>Yetenekler</h2>
+                    <div class="skills-container">
+                        <ul class="skills-list">
+                            {% for skill in skills[:skills|length//2] %}
+                            <li>{{ skill }}</li>
+                            {% endfor %}
+                        </ul>
+                        <ul class="skills-list">
+                            {% for skill in skills[skills|length//2:] %}
+                            <li>{{ skill }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="contact">
+                    <h2>İletişim</h2>
+                    <ul>
+                        <li>Email: <a href="mailto:{{ profile.email }}">{{ profile.email }}</a></li> <!-- Email linki burada -->
+                        <li>Telefon: {{ profile.phone }}</li>
+                        <li>Adres: {{ profile.address }}</li>
+                        <li><a href="https://github.com/tubaaktas" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+                        <li><a href="https://www.linkedin.com/in/tugbaaktas/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                        <li><a href="https://medium.com/@kendine_muhendis" target="_blank"><i class="fab fa-medium"></i> Medium</a></li>
+                    </ul>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
