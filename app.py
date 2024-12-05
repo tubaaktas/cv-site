@@ -12,7 +12,7 @@ def home():
         "github": "tubaaktas",
         "medium": "kendine_muhendis",
         "email": "tubaaktas83@gmail.com",
-        "phone": "0545 945 31 91",
+        "phone": "+90 545 945 31 91",
         "address": "Derince, Kocaeli, Türkiye",
         "about": (
             "Bilgisayar mühendisliği mezunuyum. Yazılım, donanım, veri bilimi ve DevOps "
@@ -34,7 +34,7 @@ def home():
             "date": "Eylül 2020 - Nisan 2021"
         },
         {
-            "title": "Mentor Yardımcısı",
+            "title": "Data Scientist Mentor Yardımcısı",
             "company": "Miuul",
             "date": "Eylül 2023 - Devam Ediyor"
         },
@@ -85,8 +85,8 @@ def home():
     ]
 
     skills = [
-        "Python", "AWS", "Kubernetes", "Helm", "Terragrunt",
-        "DigitalOcean", "GitHub", "GitLab", "Makine Öğrenimi", "Veri Bilimi"
+        "Python", "AWS", "Kubernetes", "Helm", "Terragrunt","Elasticsearch",
+        "DigitalOcean", "GitHub", "GitLab", "Makine Öğrenimi", "Veri Bilimi", "CRM"
     ]
 
     return render_template("index.html", profile=profile, experience=experience, education=education, skills=skills)
