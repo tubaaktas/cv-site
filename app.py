@@ -43,7 +43,7 @@ def home():
             "company": "Artifact System",
             "date": "29 Temmuz 2024 - Devam Ediyor",
             "description": (
-                "2 Ay zorunlu stajımın yanında gönüllü olarak stajıma devam ettiğim Artifact'de"
+                "2 Ay zorunlu stajımın yanında gönüllü olarak stajıma devam ettiğim Artifact'de "
                 "AWS servisleri, Kubernetes, Helm, Terragrunt, DigitalOcean, GitHub ve GitLab gibi "
                 "teknolojilerle çalışma deneyimi kazandım."
             )
