@@ -85,9 +85,8 @@ def home():
     ]
 
     skills = [
-        "Python", "AWS", "Kubernetes", "Helm", "Terragrunt","Elasticsearch",
-        "DigitalOcean", "GitHub", "GitLab", "Makine Öğrenimi", "Veri Bilimi", "CRM",
-        "Grafana"
+        "Python", "AWS", "Kubernetes", "Helm", "Terragrunt","Elasticsearch","Grafana",
+        "DigitalOcean", "GitHub", "GitLab", "Makine Öğrenimi", "Veri Bilimi", "CRM"
     ]
 
     return render_template("index.html", profile=profile, experience=experience, education=education, skills=skills)
